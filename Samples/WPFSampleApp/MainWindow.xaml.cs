@@ -4,6 +4,7 @@ using System.IO;
 using System.Windows;
 using NAppUpdate.Framework;
 using NAppUpdate.Framework.Common;
+using NAppUpdate.Framework.Sources;
 
 namespace NAppUpdate.SampleApp
 {
@@ -34,8 +35,9 @@ namespace NAppUpdate.SampleApp
         {
             // Normally this would be a web based source.
             // But for the demo app, we prepare an in-memory source.
-            var source = new NAppUpdate.Framework.Sources.MemorySource(File.ReadAllText("SampleAppUpdateFeed.xml"));
-            source.AddTempFile(new Uri("http://SomeSite.com/Files/NewVersion.txt"), "NewVersion.txt");
+            var source = new SimpleWebSource("http://service2.jinlook.com/hello12306/update.xml");
+                //new NAppUpdate.Framework.Sources.MemorySource(File.ReadAllText("SampleAppUpdateFeed.xml"));
+            //source.AddTempFile(new Uri("http://SomeSite.com/Files/NewVersion.txt"), "NewVersion.txt");
 
             return source;
         }
