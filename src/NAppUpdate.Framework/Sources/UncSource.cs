@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Text;
-using NAppUpdate.Framework.Common;
+using AppUpdate.Common;
 
-namespace NAppUpdate.Framework.Sources
+namespace AppUpdate.Sources
 {
 	/// <summary>
 	/// An IUpdateSource implementation for retreiving the update feed and data 
@@ -12,8 +12,8 @@ namespace NAppUpdate.Framework.Sources
 	/// Example
 	///		private const string FeedName = "Feed.xml";
 	///		UpdateManager manager = UpdateManager.Instance;
-	///		manager.UpdateFeedReader = new NAppUpdate.Framework.FeedReaders.NauXmlFeedReader();
-	///		manager.UpdateSource = new NAppUpdate.Framework.Sources.UncSource(string.Format("{0}\\{1}", UpdatePath, FeedName), UpdatePath);
+	///		manager.UpdateFeedReader = new AppUpdate.FeedReaders.NauXmlFeedReader();
+	///		manager.UpdateSource = new AppUpdate.Sources.UncSource(string.Format("{0}\\{1}", UpdatePath, FeedName), UpdatePath);
 	/// </summary>
 	public class UncSource : IUpdateSource
 	{

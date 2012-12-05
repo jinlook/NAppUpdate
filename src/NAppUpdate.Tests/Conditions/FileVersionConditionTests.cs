@@ -1,6 +1,6 @@
 ﻿using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NAppUpdate.Framework.Conditions;
+using AppUpdate.Conditions;
 
 namespace NAppUpdate.Tests.Conditions
 {

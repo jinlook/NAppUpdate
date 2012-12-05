@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NAppUpdate.Framework.Tasks;
+using AppUpdate.Tasks;
 
 namespace NAppUpdate.Tests.Tasks
 {

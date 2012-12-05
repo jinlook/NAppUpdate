@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NAppUpdate.Framework.Common
+namespace AppUpdate.Common
 {
 	[Serializable]
 	public delegate void ReportProgressDelegate(UpdateProgressInfo currentStatus);

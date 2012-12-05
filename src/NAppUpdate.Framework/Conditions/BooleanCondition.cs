@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NAppUpdate.Framework.Conditions
+namespace AppUpdate.Conditions
 {
 	[Serializable]
     public sealed class BooleanCondition : IUpdateCondition
@@ -82,7 +82,7 @@ namespace NAppUpdate.Framework.Conditions
 
         public IDictionary<string, string> Attributes { get; private set; }
 
-        public bool IsMet(NAppUpdate.Framework.Tasks.IUpdateTask task)
+        public bool IsMet(AppUpdate.Tasks.IUpdateTask task)
         {
             if (ChildConditions == null)
                 return true;

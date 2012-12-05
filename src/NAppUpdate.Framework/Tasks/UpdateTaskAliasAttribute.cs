@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NAppUpdate.Framework.Tasks
+namespace AppUpdate.Tasks
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
     public class UpdateTaskAliasAttribute : Attribute

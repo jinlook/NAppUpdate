@@ -1,6 +1,6 @@
-﻿using NAppUpdate.Framework.Common;
+﻿using AppUpdate.Common;
 
-namespace NAppUpdate.Framework.Conditions
+namespace AppUpdate.Conditions
 {
     public interface IUpdateCondition : INauFieldsHolder
     {

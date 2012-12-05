@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace NAppUpdate.Framework
+namespace AppUpdate
 {
 	[Serializable]
     public class NAppUpdateException : Exception

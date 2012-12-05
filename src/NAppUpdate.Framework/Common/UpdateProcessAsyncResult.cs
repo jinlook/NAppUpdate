@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace NAppUpdate.Framework.Common
+namespace AppUpdate.Common
 {
 	public class UpdateProcessAsyncResult : IAsyncResult
 	{

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace NAppUpdate.Framework.Utils
+namespace AppUpdate.Utils
 {
-    using NAppUpdate.Framework.Tasks;
-    using NAppUpdate.Framework.Conditions;
-    using NAppUpdate.Framework.Common;
+    using AppUpdate.Tasks;
+    using AppUpdate.Conditions;
+    using AppUpdate.Common;
 
     public static class Reflection
     {

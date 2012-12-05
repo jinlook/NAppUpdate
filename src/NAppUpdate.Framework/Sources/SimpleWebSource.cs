@@ -1,10 +1,10 @@
 ﻿using System;
-using NAppUpdate.Framework.Common;
-using NAppUpdate.Framework.Utils;
+using AppUpdate.Common;
+using AppUpdate.Utils;
 using System.Net;
 using System.IO;
 
-namespace NAppUpdate.Framework.Sources
+namespace AppUpdate.Sources
 {
 	public class SimpleWebSource : IUpdateSource
 	{

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-namespace NAppUpdate.Framework.Utils
+namespace AppUpdate.Utils
 {
 	public static class FileSystem
 	{

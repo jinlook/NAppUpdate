@@ -1,4 +1,4 @@
-using NAppUpdate.Framework.Utils;
+using AppUpdate.Utils;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace NAppUpdate.Tests.Integration

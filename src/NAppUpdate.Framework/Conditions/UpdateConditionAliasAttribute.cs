@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NAppUpdate.Framework.Conditions
+namespace AppUpdate.Conditions
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
     public class UpdateConditionAliasAttribute : Attribute

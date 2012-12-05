@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Xml;
 
-using NAppUpdate.Framework.Tasks;
-using NAppUpdate.Framework.Conditions;
+using AppUpdate.Tasks;
+using AppUpdate.Conditions;
 
-namespace NAppUpdate.Framework.FeedReaders
+namespace AppUpdate.FeedReaders
 {
     public class NauXmlFeedReader : IUpdateFeedReader
     {

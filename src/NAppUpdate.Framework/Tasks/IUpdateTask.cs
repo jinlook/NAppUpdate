@@ -1,8 +1,8 @@
 ﻿using System;
-using NAppUpdate.Framework.Common;
-using NAppUpdate.Framework.Conditions;
+using AppUpdate.Common;
+using AppUpdate.Conditions;
 
-namespace NAppUpdate.Framework.Tasks
+namespace AppUpdate.Tasks
 {
 	[Serializable]
 	public enum TaskExecutionStatus

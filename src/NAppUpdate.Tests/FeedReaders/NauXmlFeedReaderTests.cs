@@ -2,9 +2,9 @@
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NAppUpdate.Framework;
-using NAppUpdate.Framework.Conditions;
-using NAppUpdate.Framework.Tasks;
+using AppUpdate;
+using AppUpdate.Conditions;
+using AppUpdate.Tasks;
 
 namespace NAppUpdate.Tests.FeedReaders
 {
@@ -32,7 +32,7 @@ namespace NAppUpdate.Tests.FeedReaders
   </Tasks>
 </Feed>";
 
-            var reader = new NAppUpdate.Framework.FeedReaders.NauXmlFeedReader();
+            var reader = new AppUpdate.FeedReaders.NauXmlFeedReader();
             IList<IUpdateTask> updates = reader.Read(NauUpdateFeed);
 
             Assert.IsTrue(updates.Count == 1);
@@ -70,7 +70,7 @@ namespace NAppUpdate.Tests.FeedReaders
   </Tasks>
 </Feed>";
 
-			var reader = new NAppUpdate.Framework.FeedReaders.NauXmlFeedReader();
+			var reader = new AppUpdate.FeedReaders.NauXmlFeedReader();
 			IList<IUpdateTask> updates = reader.Read(NauUpdateFeed);
 
 			Assert.IsTrue(updates.Count == 1);
@@ -107,7 +107,7 @@ namespace NAppUpdate.Tests.FeedReaders
   </Tasks>
 </Feed>";
 
-			var reader = new NAppUpdate.Framework.FeedReaders.NauXmlFeedReader();
+			var reader = new AppUpdate.FeedReaders.NauXmlFeedReader();
 			IList<IUpdateTask> updates = reader.Read(NauUpdateFeed);
 
 			Assert.IsTrue(updates.Count == 1);

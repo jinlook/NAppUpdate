@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 using Microsoft.Win32.SafeHandles;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
-using NAppUpdate.Framework.Common;
-using NAppUpdate.Framework.Tasks;
+using AppUpdate.Common;
+using AppUpdate.Tasks;
 
-namespace NAppUpdate.Framework.Utils
+namespace AppUpdate.Utils
 {
 	/// <summary>
 	/// Starts the cold update process by extracting the updater app from the library's resources,
@@ -158,7 +158,7 @@ namespace NAppUpdate.Framework.Utils
 
 			// Now copy the NAU DLL
 			var assemblyLocation = typeof(NauIpc).Assembly.Location;
-			File.Copy(assemblyLocation, Path.Combine(updaterPath, "NAppUpdate.Framework.dll"), true);
+			File.Copy(assemblyLocation, Path.Combine(updaterPath, "AppUpdate.dll"), true);
 
 			// And also all other referenced DLLs (opt-in only)
 			var assemblyPath = Path.GetDirectoryName(assemblyLocation) ?? string.Empty;

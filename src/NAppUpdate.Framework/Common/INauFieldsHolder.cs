@@ -1,4 +1,4 @@
-﻿namespace NAppUpdate.Framework.Common
+﻿namespace AppUpdate.Common
 {
     public interface INauFieldsHolder
     {

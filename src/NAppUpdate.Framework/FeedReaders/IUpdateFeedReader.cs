@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using NAppUpdate.Framework.Tasks;
+using AppUpdate.Tasks;
 
-namespace NAppUpdate.Framework.FeedReaders
+namespace AppUpdate.FeedReaders
 {
     public interface IUpdateFeedReader
     {

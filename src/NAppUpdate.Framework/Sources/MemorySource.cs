@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using NAppUpdate.Framework.Common;
+using AppUpdate.Common;
 
-namespace NAppUpdate.Framework.Sources
+namespace AppUpdate.Sources
 {
     public class MemorySource : IUpdateSource
     {

@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using NAppUpdate.Framework;
-using NAppUpdate.Framework.Sources;
+using AppUpdate;
+using AppUpdate.Sources;
 
 namespace WinFormsProgressSample
 {

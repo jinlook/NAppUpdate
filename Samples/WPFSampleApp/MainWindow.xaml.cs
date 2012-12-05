@@ -2,9 +2,9 @@
 using System.ComponentModel;
 using System.IO;
 using System.Windows;
-using NAppUpdate.Framework;
-using NAppUpdate.Framework.Common;
-using NAppUpdate.Framework.Sources;
+using AppUpdate;
+using AppUpdate.Common;
+using AppUpdate.Sources;
 
 namespace NAppUpdate.SampleApp
 {
@@ -31,12 +31,12 @@ namespace NAppUpdate.SampleApp
             this.DataContext = this;
         }
 
-        private NAppUpdate.Framework.Sources.IUpdateSource PrepareUpdateSource()
+        private AppUpdate.Sources.IUpdateSource PrepareUpdateSource()
         {
             // Normally this would be a web based source.
             // But for the demo app, we prepare an in-memory source.
             var source = new SimpleWebSource("http://service2.jinlook.com/hello12306/update.xml");
-                //new NAppUpdate.Framework.Sources.MemorySource(File.ReadAllText("SampleAppUpdateFeed.xml"));
+                //new AppUpdate.Sources.MemorySource(File.ReadAllText("SampleAppUpdateFeed.xml"));
             //source.AddTempFile(new Uri("http://SomeSite.com/Files/NewVersion.txt"), "NewVersion.txt");
 
             return source;

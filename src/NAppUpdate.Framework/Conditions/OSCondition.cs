@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using NAppUpdate.Framework.Common;
+using AppUpdate.Common;
 
-namespace NAppUpdate.Framework.Conditions
+namespace AppUpdate.Conditions
 {
 	[Serializable]
     public class OSCondition : IUpdateCondition
@@ -16,7 +16,7 @@ namespace NAppUpdate.Framework.Conditions
 
         #region IUpdateCondition Members
 
-		public bool IsMet(NAppUpdate.Framework.Tasks.IUpdateTask task)
+		public bool IsMet(AppUpdate.Tasks.IUpdateTask task)
 		{
 			bool is64Bit = Is64BitOperatingSystem();
 

@@ -1,4 +1,4 @@
-﻿using NAppUpdate.Framework.Utils;
+﻿using AppUpdate.Utils;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NAppUpdate.Framework.Common
+namespace AppUpdate.Common
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
     public class NauFieldAttribute : Attribute

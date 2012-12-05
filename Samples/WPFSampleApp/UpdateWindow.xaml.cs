@@ -5,8 +5,8 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Threading;
 using System.Windows.Media.Imaging;
-using NAppUpdate.Framework;
-using NAppUpdate.Framework.Common;
+using AppUpdate;
+using AppUpdate.Common;
 
 namespace NAppUpdate.SampleApp
 {
@@ -26,7 +26,7 @@ namespace NAppUpdate.SampleApp
             _helper = new UpdateTaskHelper();
             InitializeComponent();
 
-			var iconStream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("NAppUpdate.Framework.updateicon.ico");
+			var iconStream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("AppUpdate.updateicon.ico");
         	if (iconStream != null)
         		this.Icon = new IconBitmapDecoder(iconStream, BitmapCreateOptions.None, BitmapCacheOption.Default).Frames[0];
             this.DataContext = _helper;

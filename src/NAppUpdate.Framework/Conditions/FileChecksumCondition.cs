@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
-using NAppUpdate.Framework.Common;
-using NAppUpdate.Framework.Tasks;
+using AppUpdate.Common;
+using AppUpdate.Tasks;
 
-namespace NAppUpdate.Framework.Conditions
+namespace AppUpdate.Conditions
 {
 	[Serializable]
     public class FileChecksumCondition : IUpdateCondition

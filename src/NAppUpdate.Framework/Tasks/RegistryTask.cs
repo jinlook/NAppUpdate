@@ -1,8 +1,8 @@
 ﻿using System;
-using NAppUpdate.Framework.Common;
+using AppUpdate.Common;
 using Microsoft.Win32;
 
-namespace NAppUpdate.Framework.Tasks
+namespace AppUpdate.Tasks
 {
 	[Serializable]
 	[UpdateTaskAlias("registryUpdate")]

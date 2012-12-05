@@ -1,9 +1,9 @@
 ﻿using System;
-using NAppUpdate.Framework.Common;
-using NAppUpdate.Framework.Conditions;
-using NAppUpdate.Framework.Sources;
+using AppUpdate.Common;
+using AppUpdate.Conditions;
+using AppUpdate.Sources;
 
-namespace NAppUpdate.Framework.Tasks
+namespace AppUpdate.Tasks
 {
 	[Serializable]
 	public abstract class UpdateTaskBase : IUpdateTask

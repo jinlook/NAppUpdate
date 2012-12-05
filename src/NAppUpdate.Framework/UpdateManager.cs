@@ -3,13 +3,13 @@ using System.Diagnostics;
 using System.IO;
 using System;
 using System.Threading;
-using NAppUpdate.Framework.Common;
-using NAppUpdate.Framework.FeedReaders;
-using NAppUpdate.Framework.Sources;
-using NAppUpdate.Framework.Tasks;
-using NAppUpdate.Framework.Utils;
+using AppUpdate.Common;
+using AppUpdate.FeedReaders;
+using AppUpdate.Sources;
+using AppUpdate.Tasks;
+using AppUpdate.Utils;
 
-namespace NAppUpdate.Framework
+namespace AppUpdate
 {
 	/// <summary>
 	/// An UpdateManager class is a singleton class handling the update process from start to end for a consumer application

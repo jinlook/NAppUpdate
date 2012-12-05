@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Diagnostics;
-using NAppUpdate.Framework.Common;
+using AppUpdate.Common;
 
-namespace NAppUpdate.Framework.Conditions
+namespace AppUpdate.Conditions
 {
 	[Serializable]
     [UpdateConditionAlias("version")]

@@ -2,7 +2,7 @@
 using System.Security.Principal;
 using System.Security.AccessControl;
 
-namespace NAppUpdate.Framework.Utils
+namespace AppUpdate.Utils
 {
     public static class PermissionsCheck
     {

@@ -1,7 +1,7 @@
 ﻿using System;
-using NAppUpdate.Framework.Common;
+using AppUpdate.Common;
 
-namespace NAppUpdate.Framework.Sources
+namespace AppUpdate.Sources
 {
     public interface IUpdateSource
     {

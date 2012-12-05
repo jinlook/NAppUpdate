@@ -2,9 +2,9 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 
-using NAppUpdate.Framework;
-using NAppUpdate.Framework.Common;
-using NAppUpdate.Framework.Sources;
+using AppUpdate;
+using AppUpdate.Common;
+using AppUpdate.Sources;
 
 namespace WinFormsSampleApp
 {
@@ -38,7 +38,7 @@ namespace WinFormsSampleApp
 
             // UpdateManager initialization
             UpdateManager updManager = UpdateManager.Instance;
-            updManager.UpdateSource = new NAppUpdate.Framework.Sources.SimpleWebSource(/* update feed URL */);
+            updManager.UpdateSource = new AppUpdate.Sources.SimpleWebSource(/* update feed URL */);
             updManager.Config.TempFolder = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "NAppUpdateWinFormsSample\\Updates");
 			updManager.ReinstateIfRestarted();
         }

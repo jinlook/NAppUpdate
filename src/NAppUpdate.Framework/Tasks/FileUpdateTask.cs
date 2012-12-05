@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
-using NAppUpdate.Framework.Common;
-using NAppUpdate.Framework.Utils;
+using AppUpdate.Common;
+using AppUpdate.Utils;
 
-namespace NAppUpdate.Framework.Tasks
+namespace AppUpdate.Tasks
 {
 	[Serializable]
 	[UpdateTaskAlias("fileUpdate")]

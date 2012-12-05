@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using NAppUpdate.Framework.FeedReaders;
-using NAppUpdate.Framework.Tasks;
+using AppUpdate.FeedReaders;
+using AppUpdate.Tasks;
 
 namespace WinFormsProgressSample
 {

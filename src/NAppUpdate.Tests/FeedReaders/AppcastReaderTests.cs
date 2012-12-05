@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using NAppUpdate.Framework;
+using AppUpdate;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace NAppUpdate.Tests.Unit
@@ -29,7 +29,7 @@ namespace NAppUpdate.Tests.Unit
         [TestMethod]
         public void Should_be_able_to_get_the_description_from_the_update()
         {
-            var reader = new NAppUpdate.Framework.FeedReaders.AppcastReader();
+            var reader = new AppUpdate.FeedReaders.AppcastReader();
             var updates = reader.Read(ZuneUpdateFeed);
 
             Assert.AreEqual(1, updates.Count());

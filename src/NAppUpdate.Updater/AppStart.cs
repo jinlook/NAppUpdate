@@ -4,10 +4,10 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Threading;
-using NAppUpdate.Framework;
-using NAppUpdate.Framework.Common;
-using NAppUpdate.Framework.Tasks;
-using NAppUpdate.Framework.Utils;
+using AppUpdate;
+using AppUpdate.Common;
+using AppUpdate.Tasks;
+using AppUpdate.Utils;
 
 namespace NAppUpdate.Updater
 {
@@ -59,7 +59,7 @@ namespace NAppUpdate.Updater
                     Log("Loading {0}", assemblyPath);
 
                     if (assemblyPath.Equals(System.Reflection.Assembly.GetEntryAssembly().Location, StringComparison.InvariantCultureIgnoreCase)
-                        || assemblyPath.EndsWith("NAppUpdate.Framework.dll"))
+                        || assemblyPath.EndsWith("AppUpdate.dll"))
                     {
                         Log("\tSkipping (part of current execution)");
                         continue;

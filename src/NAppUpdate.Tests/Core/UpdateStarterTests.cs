@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NAppUpdate.Framework;
-using NAppUpdate.Framework.Tasks;
-using NAppUpdate.Framework.Utils;
+using AppUpdate;
+using AppUpdate.Tasks;
+using AppUpdate.Utils;
 
 namespace NAppUpdate.Tests.Core
 {
@@ -21,10 +21,10 @@ namespace NAppUpdate.Tests.Core
 
 			Assert.IsTrue(Directory.Exists(path));
 			Assert.IsTrue(File.Exists(Path.Combine(path, "Foo.exe")));
-			Assert.IsTrue(File.Exists(Path.Combine(path, "NAppUpdate.Framework.dll")));
+			Assert.IsTrue(File.Exists(Path.Combine(path, "AppUpdate.dll")));
 
 			// Cleanup test
-			NAppUpdate.Framework.Utils.FileSystem.DeleteDirectory(path);
+			AppUpdate.Utils.FileSystem.DeleteDirectory(path);
 		}
 
 		[TestMethod]
@@ -62,7 +62,7 @@ namespace NAppUpdate.Tests.Core
 
 			Assert.IsTrue(Directory.Exists(path));
 			Assert.IsTrue(File.Exists(Path.Combine(path, "Foo.exe")));
-			Assert.IsTrue(File.Exists(Path.Combine(path, "NAppUpdate.Framework.dll")));
+			Assert.IsTrue(File.Exists(Path.Combine(path, "AppUpdate.dll")));
 
 			// Cleanup test
 			FileSystem.DeleteDirectory(path);

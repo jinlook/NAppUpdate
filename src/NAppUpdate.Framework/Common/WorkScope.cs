@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NAppUpdate.Framework.Common
+namespace AppUpdate.Common
 {
 	// TODO: This isn't air tight, it is just "good enough"
 	public class WorkScope : IDisposable

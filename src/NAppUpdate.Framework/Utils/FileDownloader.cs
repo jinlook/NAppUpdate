@@ -1,9 +1,9 @@
 using System;
 using System.IO;
 using System.Net;
-using NAppUpdate.Framework.Common;
+using AppUpdate.Common;
 
-namespace NAppUpdate.Framework.Utils
+namespace AppUpdate.Utils
 {
 	public sealed class FileDownloader
 	{

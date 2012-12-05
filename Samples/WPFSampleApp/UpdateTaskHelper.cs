@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using NAppUpdate.Framework;
-using NAppUpdate.Framework.Tasks;
+using AppUpdate;
+using AppUpdate.Tasks;
 
 namespace NAppUpdate.SampleApp
 {

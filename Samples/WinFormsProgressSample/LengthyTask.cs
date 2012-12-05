@@ -1,7 +1,7 @@
 ﻿using System.Threading;
-using NAppUpdate.Framework.Common;
-using NAppUpdate.Framework.Sources;
-using NAppUpdate.Framework.Tasks;
+using AppUpdate.Common;
+using AppUpdate.Sources;
+using AppUpdate.Tasks;
 
 namespace WinFormsProgressSample
 {

@@ -1,9 +1,9 @@
 using System.Xml;
 using System.Collections.Generic;
-using NAppUpdate.Framework.Tasks;
-using NAppUpdate.Framework.Conditions;
+using AppUpdate.Tasks;
+using AppUpdate.Conditions;
 
-namespace NAppUpdate.Framework.FeedReaders
+namespace AppUpdate.FeedReaders
 {
     public class AppcastReader : IUpdateFeedReader
     {

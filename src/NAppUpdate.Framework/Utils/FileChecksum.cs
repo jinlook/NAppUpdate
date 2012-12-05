@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Security.Cryptography;
 
-namespace NAppUpdate.Framework.Utils
+namespace AppUpdate.Utils
 {
     public static class FileChecksum
     {
