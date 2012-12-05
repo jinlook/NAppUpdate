@@ -74,12 +74,6 @@
   <ItemGroup>
     <Compile Include="AppStart.cs" />
     <Compile Include="ArgumentsParser.cs" />
-    <Compile Include="ConsoleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsoleForm.Designer.cs">
-      <DependentUpon>ConsoleForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -126,11 +120,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ConsoleForm.resx">
-      <DependentUpon>ConsoleForm.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NAppUpdate.Framework\NAppUpdate.Framework.csproj">

@@ -18,9 +18,17 @@
                 <Merging>
                     <ResourcesCompression Compress="0" />
                     <MemberRefsProxy />
-                    <Pruning />
-                    <Obfuscation Obfuscate="1">
+                    <Pruning>
                         <Exclusion />
+                    </Pruning>
+                    <Obfuscation Obfuscate="1">
+                        <Exclusion>
+                            <Token Table="Namespace">
+                                <Assembly>AppUpdate</Assembly>
+                                <Module>AppUpdate.dll</Module>
+                                <Namespace>AppUpdate.Utils</Namespace>
+                            </Token>
+                        </Exclusion>
                     </Obfuscation>
                     <ControlFlow Obfuscate="1" />
                     <StringsEncoding />

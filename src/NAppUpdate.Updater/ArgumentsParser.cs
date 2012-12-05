@@ -49,10 +49,10 @@ namespace NAppUpdate.Updater
 
             	arg = CleanArg(arg);
 				if (arg == "log") {
-					this.Log = true;
+					this.Log = false;
 					this.HasArgs = true;
 				} else if (arg == "showconsole") {
-					this.ShowConsole = true;
+					this.ShowConsole = false;
 					this.HasArgs = true;
 				} else if (this.ProcessName == null) {
                     // if we don't already have the processname set, assume this is it
