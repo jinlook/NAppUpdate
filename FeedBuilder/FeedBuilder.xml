@@ -109,17 +109,17 @@
             </summary>
             <remarks></remarks>
         </member>
-        <member name="T:FeedBuilder.My.Resources.Resources">
+        <member name="T:FeedBuilder.My_Project.Resources">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
-        <member name="P:FeedBuilder.My.Resources.Resources.ResourceManager">
+        <member name="P:FeedBuilder.My_Project.Resources.ResourceManager">
             <summary>
               Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
-        <member name="P:FeedBuilder.My.Resources.Resources.Culture">
+        <member name="P:FeedBuilder.My_Project.Resources.Culture">
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.

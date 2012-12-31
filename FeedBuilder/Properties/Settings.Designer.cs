@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace My {
+namespace FeedBuilder.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -142,6 +142,9 @@ namespace My {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Configuration.SettingsProviderAttribute(typeof(FeedBuilder.FeedBuilderSettingsProvider))]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>*.pdb</string>\r\n  <string>*.vshost.exe</string>\r\n</ArrayOfString>")]
         public global::System.Collections.Specialized.StringCollection IgnoreFiles {
             get {
                 return ((global::System.Collections.Specialized.StringCollection)(this["IgnoreFiles"]));
