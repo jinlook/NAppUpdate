@@ -1,38 +1,38 @@
-using Microsoft.VisualBasic;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
 using System.Diagnostics;
-using System.Windows.Forms;
 using System.IO;
+using AppUpdate.Utils;
+
 namespace FeedBuilder
 {
-
 	public class FileInfoEx
 	{
-		private FileInfo myFileInfo;
-		private string myFileVersion;
+		private readonly FileInfo myFileInfo;
+		private readonly string myFileVersion;
+		private readonly string myHash;
 
-		private string myHash;
-		public FileInfo FileInfo {
+		public FileInfo FileInfo
+		{
 			get { return myFileInfo; }
 		}
 
-		public string FileVersion {
+		public string FileVersion
+		{
 			get { return myFileVersion; }
 		}
 
-		public string Hash {
+		public string Hash
+		{
 			get { return myHash; }
 		}
 
-		public FileInfoEx(string fileName)
+        public string RelativeName { get; private set; }
+
+		public FileInfoEx(string fileName, int rootDirLength)
 		{
 			myFileInfo = new FileInfo(fileName);
 			myFileVersion = FileVersionInfo.GetVersionInfo(fileName).FileVersion;
 			myHash = AppUpdate.Utils.FileChecksum.GetSHA256Checksum(fileName);
+            RelativeName = fileName.Substring(rootDirLength + 1);
 		}
 	}
 }

@@ -1,9 +1,9 @@
 ﻿using System;
-using System.IO;
 using System.Diagnostics;
+using System.IO;
 using System.Reflection;
-using System.Windows.Forms;
 using System.Threading;
+using System.Windows.Forms;
 using AppUpdate;
 using AppUpdate.Common;
 using AppUpdate.Tasks;
@@ -29,8 +29,8 @@ namespace NAppUpdate.Updater
                 // Get the update process name, to be used to create a named pipe and to wait on the application
                 // to quit
                 string syncProcessName = _args.ProcessName;
-                if (string.IsNullOrEmpty(syncProcessName))
-                    throw new ArgumentException("The command line needs to specify the mutex of the program to update.", "args");
+                if (string.IsNullOrEmpty(syncProcessName)) //Application.Exit();
+                    throw new ArgumentException("The command line needs to specify the mutex of the program to update.", "ar" + "gs");
 
                 // Load extra assemblies to the app domain, if present
                 var availableAssemblies = FileSystem.GetFiles(workingDir, "*.exe|*.dll", SearchOption.TopDirectoryOnly);
@@ -67,12 +67,14 @@ namespace NAppUpdate.Updater
                     {
                         // An abandoned mutex is exactly what we are expecting...
                     }
+                    finally
+                    {
+                    }
                 }
 
                 bool updateSuccessful = true;
 
-                if (dto == null || dto.Configs == null)
-                    throw new Exception("Invalid DTO received");
+                if (dto == null || dto.Configs == null) throw new Exception("Invalid DTO received");
 
                 if (dto.LogItems != null) // shouldn't really happen
                 {
@@ -87,6 +89,18 @@ namespace NAppUpdate.Updater
 
                 if (dto.Tasks == null || dto.Tasks.Count == 0)
                     throw new Exception("Could not find the updates list (or it was empty).");
+
+                //This can be handy if you're trying to debug the updater.exe!
+                //#if (DEBUG)
+                //{  
+                //                if (_args.ShowConsole) {
+                //                    _console.WriteLine();
+                //                    _console.WriteLine("Pausing to attach debugger.  Press any key to continue.");
+                //                    _console.ReadKey();
+                //                }
+
+                //}
+                //#endif
 
                 // Perform the actual off-line update process
                 foreach (var t in dto.Tasks)
@@ -108,11 +122,9 @@ namespace NAppUpdate.Updater
                         t.ExecutionStatus = TaskExecutionStatus.Failed;
                     }
 
-                    if (t.ExecutionStatus != TaskExecutionStatus.Successful)
-                    {
-                        updateSuccessful = false;
-                        break;
-                    }
+                    if (t.ExecutionStatus == TaskExecutionStatus.Successful) continue;
+                    updateSuccessful = false;
+                    break;
                 }
 
                 if (updateSuccessful)
@@ -144,8 +156,7 @@ namespace NAppUpdate.Updater
                                 };
 
                     var p = NauIpc.LaunchProcessAndSendDto(dto, info, syncProcessName);
-                    if (p == null)
-                        throw new UpdateProcessFailedException("Unable to relaunch application");
+                    if (p == null) throw new UpdateProcessFailedException("Unable to relaunch application and/or send DTO");
                 }
             }
             catch (Exception ex)

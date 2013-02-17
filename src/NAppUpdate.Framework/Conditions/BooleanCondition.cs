@@ -39,7 +39,7 @@ namespace AppUpdate.Conditions
         }
         #endregion
 
-        private class ConditionItem
+        protected class ConditionItem
         {
             public ConditionItem(IUpdateCondition cnd, ConditionType typ)
             {
@@ -56,7 +56,7 @@ namespace AppUpdate.Conditions
             Attributes = new Dictionary<string, string>();
         }
 
-        private LinkedList<ConditionItem> ChildConditions { get; set; }
+        protected LinkedList<ConditionItem> ChildConditions { get; set; }
         public int ChildConditionsCount { get { if (ChildConditions != null) return ChildConditions.Count; return 0; } }
 
         public void AddCondition(IUpdateCondition cnd)
