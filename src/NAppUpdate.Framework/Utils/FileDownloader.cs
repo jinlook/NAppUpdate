@@ -2,6 +2,7 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.Net;
+using System.Net.Cache;
 using AppUpdate.Common;
 
 namespace AppUpdate.Utils
@@ -30,8 +31,14 @@ namespace AppUpdate.Utils
 
 		public byte[] Download()
 		{
-			using (var client = new WebClient())
-				return client.DownloadData(_uri);
+            using (var client = new WebClient())
+            {
+                client.CachePolicy = new HttpRequestCachePolicy(HttpRequestCacheLevel.NoCacheNoStore);
+                client.Headers.Add("Cache-Control", "no-cache");
+                client.Headers.Add("Pragma", "no-cache");
+                client.Headers.Add("Pragma", "no-store");
+                return client.DownloadData(_uri);
+            }
 		}
 
 		public bool DownloadToFile(string tempLocation)
@@ -42,6 +49,10 @@ namespace AppUpdate.Utils
 		public bool DownloadToFile(string tempLocation, Action<UpdateProgressInfo> onProgress)
 		{
 			var request = WebRequest.Create(_uri);
+            request.CachePolicy = new HttpRequestCachePolicy(HttpRequestCacheLevel.NoCacheNoStore);
+            request.Headers.Add("Cache-Control", "no-cache");
+            request.Headers.Add("Pragma", "no-cache");
+            request.Headers.Add("Pragma", "no-store");
 			request.Proxy = Proxy;
 
 			using (var response = request.GetResponse())

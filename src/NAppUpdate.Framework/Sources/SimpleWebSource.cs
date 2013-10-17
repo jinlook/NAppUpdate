@@ -3,6 +3,7 @@ using AppUpdate.Common;
 using AppUpdate.Utils;
 using System.Net;
 using System.IO;
+using System.Net.Cache;
 
 namespace AppUpdate.Sources
 {
@@ -29,6 +30,10 @@ namespace AppUpdate.Sources
 			string data = string.Empty;
 
 			var request = WebRequest.Create(FeedUrl);
+            request.CachePolicy = new HttpRequestCachePolicy(HttpRequestCacheLevel.NoCacheNoStore);
+            request.Headers.Add("Cache-Control", "no-cache");
+            request.Headers.Add("Pragma", "no-cache");
+            request.Headers.Add("Pragma", "no-store");
 			request.Method = "GET";
 			request.Proxy = Proxy;
 			using (var response = request.GetResponse())
