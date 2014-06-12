@@ -86,6 +86,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Sources\BaiduPanSource.cs" />
     <Compile Include="Sources\IUpdateSource.cs" />
     <Compile Include="Sources\MemorySource.cs" />
     <Compile Include="Sources\SimpleWebSource.cs" />
