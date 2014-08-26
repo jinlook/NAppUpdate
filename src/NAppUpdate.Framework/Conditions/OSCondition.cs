@@ -14,7 +14,6 @@ namespace AppUpdate.Conditions
 		// use http://stackoverflow.com/questions/545666/how-to-translate-ms-windows-os-version-numbers-into-product-names-in-net
 		// and http://msdn.microsoft.com/en-us/library/ms724429(VS.85).aspx
 
-		public bool IsMet(Tasks.IUpdateTask task)
 		public bool IsMet(AppUpdate.Tasks.IUpdateTask task)
 		{
 			var is64Bit = Is64BitOperatingSystem();
