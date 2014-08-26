@@ -14,11 +14,10 @@ namespace AppUpdate.Conditions
 		// use http://stackoverflow.com/questions/545666/how-to-translate-ms-windows-os-version-numbers-into-product-names-in-net
 		// and http://msdn.microsoft.com/en-us/library/ms724429(VS.85).aspx
 
-        #region IUpdateCondition Members
-
+		public bool IsMet(Tasks.IUpdateTask task)
 		public bool IsMet(AppUpdate.Tasks.IUpdateTask task)
 		{
-			bool is64Bit = Is64BitOperatingSystem();
+			var is64Bit = Is64BitOperatingSystem();
 
 			if (OsBits == 32 && OsBits != 64)
 				return true;
@@ -31,8 +30,6 @@ namespace AppUpdate.Conditions
 
 			return true;
 		}
-
-    	#endregion
 
         // Check OS bitness (32 / 64 bit)
         // As seen on http://1code.codeplex.com/SourceControl/changeset/view/39074#842775
