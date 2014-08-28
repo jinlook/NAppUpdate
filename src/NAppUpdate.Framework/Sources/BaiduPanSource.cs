@@ -32,6 +32,10 @@ namespace AppUpdate.Sources
             var request = WebRequest.Create(string.Format(_baiduDownloadUrlFormat, AccessToken, FeedBaiduPanPath));
             request.Method = "GET";
             request.Proxy = Proxy;
+            request.CachePolicy = new System.Net.Cache.RequestCachePolicy(System.Net.Cache.RequestCacheLevel.NoCacheNoStore);
+            request.Headers.Add("Cache-Control", "no-cache");
+            request.Headers.Add("Pragma", "no-cache");
+            request.Headers.Add("Pragma", "no-store");
             using (var response = request.GetResponse())
             {
                 var stream = response.GetResponseStream();
